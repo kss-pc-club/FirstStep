@@ -16,6 +16,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 window.addEventListener('load',async ()=>{
   $('.container#loader').fadeOut(500).removeClass("showing")
   $('.container#start').addClass("showing").css({opacity: 0}).animate({opacity: 1},500)
+  $('#scrollbar_thumb').animate({height: window.innerHeight / $('.container').not('#loader').length}, 500)
   await sleep(600)
   $('.container').removeAttr("style")
 })

@@ -20,6 +20,8 @@ const animation = async ($b,$a,back=false)=>{
 	await sleep(200)
 	$b.animate({ top: outH }, 700)
 	$a.addClass("showing").css({top: -outH}).animate({top: 0},700);
+	const $cont = $('.container').not('#loader')
+	$('#scrollbar_thumb').animate({top: (window.innerHeight - 16) * $cont.index($a) / $cont.length + 8}, 700)
 	await sleep(700);
 	$('.arrow').fadeIn(300).removeAttr("style");
 	$b.removeClass("showing");

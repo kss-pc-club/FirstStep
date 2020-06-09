@@ -68,13 +68,45 @@ div.arrow{
   }
 }
 
-@media screen and (max-width: 899px){
+#scrollbar{
+  position: fixed;
+  right: 0.3vw;
+  top: 0;
+  width: 0.8vw;
+  height: 100vh;
+  #scrollbar_thumb{
+    position: absolute;
+    top: 8px;
+    width: 0.8vw;
+    border-radius: 0.4vw;
+    background-color: #aaa;
+  }
+}
+
+#noteJS{
+  opacity: 0;
+  height: 0;
+  text-align: center;
+  animation-name: noteJS;
+  animation-duration: 200ms;
+  animation-fill-mode: both;
+  animation-delay: 5s;
+}
+
+@media (max-width: 899px){
   #note900px{
     display: block;
   }
 }
-@media screen and (min-width: 900px){
+
+@media (min-width: 900px){
   #note900px{
     display: none;
   }
+}
+
+@keyframes noteJS{
+  0%{ opacity: 0; height: 0; }
+  1%{ opacity: 0.01; height: auto; }
+  100%{ opacity: 1; height: auto; }
 }
