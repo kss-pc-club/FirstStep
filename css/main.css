@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=M+PLUS+Rounded+1c&family=Noto+Sans+JP&family=Poppins&display=swap");
+:root {
+  font-family: "Poppins", 'Kosugi Maru', 'M PLUS Rounded 1c', "Noto Sans Japanese", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  overflow: hidden;
+}
+
+* {
+  font-size: 1.6rem;
+}
+
+span.material-icons {
+  font-size: 1.6rem;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr auto 1fr;
+      grid-template-columns: 1fr auto 1fr;
+  -ms-grid-rows: 1fr auto 1fr;
+      grid-template-rows: 1fr auto 1fr;
+      grid-template-areas: ". . ." ". i ." ". . .";
+}
+
+.container .center {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: i;
+  max-height: 100vh;
+}
+
+.container:not(.showing) {
+  display: none;
+}
+
+p.title {
+  font-size: 5rem;
+  text-align: center;
+}
+
+div.arrow {
+  position: absolute;
+  left: calc(50vw - (3vw / 1.41421356));
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+  width: 3vw;
+  height: 3vw;
+  cursor: pointer;
+}
+
+div.arrow-bottom {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: 2vh;
+}
+
+div.arrow-top {
+  top: 2vh;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+/*# sourceMappingURL=main.css.map */
