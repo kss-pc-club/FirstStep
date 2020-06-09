@@ -12,3 +12,10 @@ window.addEventListener('DOMContentLoaded',()=>{
     animation($nowContainer, $nowContainer.prev(), true)
   })
 })
+
+window.addEventListener('load',async ()=>{
+  $('.container#loader').fadeOut(500).removeClass("showing")
+  $('.container#start').addClass("showing").css({opacity: 0}).animate({opacity: 1},500)
+  await sleep(600)
+  $('.container').removeAttr("style")
+})

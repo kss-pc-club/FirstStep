@@ -21,8 +21,11 @@ const animation = async ($b,$a,back=false)=>{
 	$b.animate({ top: outH }, 700)
 	$a.addClass("showing").css({top: -outH}).animate({top: 0},700);
 	await sleep(700);
-	$('.arrow').fadeIn(300);
+	$('.arrow').fadeIn(300).removeAttr("style");
 	$b.removeClass("showing");
+	await sleep(100)
+	$b.removeAttr("style")
+	$a.removeAttr("style")
 }
 
 export {sleep, animation}
