@@ -37,6 +37,8 @@ span.material-icons{
   .center{
     grid-area: i;
     max-height: 100vh;
+    max-width: calc(100vw - 48px);
+    margin: 8px;
   }
 }
 .container:not(.showing){
@@ -63,5 +65,16 @@ div.arrow{
   &-top{
     top: 2vh;
     transform: rotate(-135deg);
+  }
+}
+
+@media screen and (max-width: 899px){
+  #note900px{
+    display: block;
+  }
+}
+@media screen and (min-width: 900px){
+  #note900px{
+    display: none;
   }
 }
