@@ -11,6 +11,9 @@ window.addEventListener('DOMContentLoaded',()=>{
     const $nowContainer = $(this).parents('.container');
     animation($nowContainer, $nowContainer.prev(), true)
   })
+  document.querySelector('button#viewFull').addEventListener('click',()=>{
+    document.querySelector('html').requestFullscreen();
+  })
 })
 
 window.addEventListener('load',async ()=>{

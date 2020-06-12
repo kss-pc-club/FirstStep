@@ -113,10 +113,18 @@ div.arrow-top {
   #note900px {
     display: block;
   }
+  button#viewFull {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
 }
 
 @media (min-width: 900px) {
   #note900px {
+    display: none;
+  }
+  button#viewFull {
     display: none;
   }
 }
