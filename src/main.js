@@ -1,4 +1,5 @@
 import "./components/external-link";
+import "./components/image"
 import {sleep, animation} from "./functions"
 const $ = require("jquery")
 

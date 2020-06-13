@@ -7,6 +7,7 @@
   font-size: 62.5%;
   box-sizing: border-box;
   overflow-x: hidden;
+  outline: none;
 }
 
 html, body{
@@ -35,6 +36,7 @@ span.material-icons{
   grid-template-rows: 1fr auto 1fr;
   grid-template-areas: ". . ." ". i ." ". . .";
   .center{
+    text-align: center;
     grid-area: i;
     max-height: 100vh;
     max-width: calc(100vw - 48px);
@@ -47,9 +49,48 @@ span.material-icons{
 
 p.title{
   font-size: 5rem;
-  text-align: center;
 }
 
+li{
+  width: fit-content;
+  margin: auto;
+}
+
+a{
+  color: #333;
+}
+
+.modal_back{
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0006;
+  opacity: 0;
+  transition: 500ms;
+  display: none;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  grid-template-areas: ". . ." ". i ." ". . .";
+  img{
+    grid-area: i;
+    z-index: 2;
+    width: calc(100vw - 16px);
+    margin: auto 8px;
+    cursor: pointer;
+  }
+  &.showing{
+    opacity: 1;
+    display: block;
+  }
+}
+
+.imgContainer{
+  img{
+    width: 100px;
+    cursor: zoom-in;
+  }
+}
 
 div.arrow{
   position: absolute;
