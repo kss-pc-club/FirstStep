@@ -1,20 +1,19 @@
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=M+PLUS+Rounded+1c&family=Noto+Sans+JP&family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=M+PLUS+Rounded+1c&family=Noto+Sans+JP&family=Poppins&display=swap");
 
 :root{
-  font-family: "Poppins", 'Kosugi Maru', 'M PLUS Rounded 1c', "Noto Sans Japanese", sans-serif;
-  box-sizing: border-box;
-  font-size: 62.5%;
   box-sizing: border-box;
   overflow-x: hidden;
+  font-family: "Poppins", "Kosugi Maru", "M PLUS Rounded 1c", "Noto Sans Japanese", sans-serif;
+  font-size: 62.5%;
   outline: none;
 }
 
 html, body{
-  margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
+  margin: 0;
   overflow: hidden;
+  background-color: #f8f9fa;
 }
 
 *{
@@ -29,20 +28,22 @@ span.material-icons{
   position: absolute;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 100vw;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  grid-template-rows: 1fr auto 1fr;
   grid-template-areas: ". . ." ". i ." ". . .";
+  grid-template-rows: 1fr auto 1fr;
+  grid-template-columns: 1fr auto 1fr;
+  width: 100vw;
+  height: 100vh;
+
   .center{
-    text-align: center;
     grid-area: i;
-    max-height: 100vh;
     max-width: calc(100vw - 48px);
+    max-height: 100vh;
     margin: 8px;
+    text-align: center;
   }
 }
+
 .container:not(.showing){
   display: none;
 }
@@ -63,29 +64,32 @@ a{
 .modal_back{
   position: fixed;
   z-index: 1;
+  display: none;
+  grid-template-areas: ". . ." ". i ." ". . .";
+  grid-template-rows: 1fr auto 1fr;
+  grid-template-columns: 1fr auto 1fr;
   width: 100vw;
   height: 100vh;
   background-color: #0006;
   opacity: 0;
   transition: 500ms;
-  display: none;
-  grid-template-columns: 1fr auto 1fr;
-  grid-template-rows: 1fr auto 1fr;
-  grid-template-areas: ". . ." ". i ." ". . .";
+
   img{
-    grid-area: i;
     z-index: 2;
+    grid-area: i;
     width: calc(100vw - 16px);
     margin: auto 8px;
     cursor: pointer;
   }
+
   &.showing{
-    opacity: 1;
     display: block;
+    opacity: 1;
   }
 }
 
 .imgContainer{
+
   img{
     width: 100px;
     cursor: zoom-in;
@@ -95,15 +99,17 @@ a{
 div.arrow{
   position: absolute;
   left: calc(50vw - (3vw / 1.41421356));
-  border-right: 3px solid #000;
-  border-bottom: 3px solid #000;
   width: 3vw;
   height: 3vw;
   cursor: pointer;
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+
   &-bottom{
-    transform: rotate(45deg);
     bottom: 2vh;
+    transform: rotate(45deg);
   }
+
   &-top{
     top: 2vh;
     transform: rotate(-135deg);
@@ -112,33 +118,36 @@ div.arrow{
 
 #scrollbar{
   position: fixed;
-  right: 0.3vw;
   top: 0;
+  right: 0.3vw;
   width: 0.8vw;
   height: 100vh;
+
   #scrollbar_thumb{
     position: absolute;
     top: 8px;
     width: 0.8vw;
-    border-radius: 0.4vw;
     background-color: #aaa;
+    border-radius: 0.4vw;
   }
 }
 
 #noteJS{
-  opacity: 0;
   height: 0;
   text-align: center;
+  opacity: 0;
   animation-name: noteJS;
   animation-duration: 200ms;
-  animation-fill-mode: both;
   animation-delay: 5s;
+  animation-fill-mode: both;
 }
 
 @media (max-width: 899px){
+
   #note900px{
     display: block;
   }
+
   button#viewFull{
     position: absolute;
     top: 8px;
@@ -147,16 +156,18 @@ div.arrow{
 }
 
 @media (min-width: 900px){
+
   #note900px{
     display: none;
   }
+
   button#viewFull{
     display: none;
   }
 }
 
 @keyframes noteJS{
-  0%{ opacity: 0; height: 0; }
-  1%{ opacity: 0.01; height: auto; }
-  100%{ opacity: 1; height: auto; }
+  0%{ height: 0; opacity: 0; }
+  1%{ height: auto; opacity: 0.01; }
+  100%{ height: auto; opacity: 1; }
 }
