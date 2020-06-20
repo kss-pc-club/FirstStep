@@ -100,10 +100,41 @@ a {
   opacity: 1;
 }
 
+.imgContainer {
+  margin-top: 16px;
+}
+
 .imgContainer img {
-  width: 100px;
+  width: 200px;
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 5px 10px 0px #aaa;
+          box-shadow: 0px 5px 10px 0px #aaa;
+}
+
+.AppInstall {
+  display: inline-block;
+  height: 40px;
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+.AppInstall.AppStore {
+  width: 135px;
+}
+
+.AppInstall.GooglePlay {
+  width: auto;
+}
+
+.AppInstall.GooglePlay img {
+  width: auto;
+  height: 58px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: -9px -9px;
+     object-position: -9px -9px;
 }
 
 div.arrow {
