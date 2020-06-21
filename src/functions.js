@@ -15,9 +15,10 @@ const sleep = t => new Promise(r=>setTimeout(r,t));
  * @returns {void}
  */
 const animation = async ($b,$a,back=false)=>{
-  const outH = (back?(window.outerHeight):-(window.outerHeight));
+  const outH = (back?($a.outerHeight()):-($b.outerHeight()));
 	$('.arrow').fadeOut(300);
 	await sleep(200)
+	$('html, body').css({overflow: 'hidden'})
 	$b.animate({ top: outH }, 700)
 	$a.addClass("showing").css({top: -outH}).animate({top: 0},700);
 	const $cont = $('.container').not('#loader')
@@ -25,7 +26,9 @@ const animation = async ($b,$a,back=false)=>{
 	await sleep(700);
 	$('.arrow').fadeIn(300).removeAttr("style");
 	$b.removeClass("showing");
+	$('html, body').css({overflow: 'auto'})
 	await sleep(100)
+	$('html, body').removeAttr("style")
 	$b.removeAttr("style")
 	$a.removeAttr("style")
 }
