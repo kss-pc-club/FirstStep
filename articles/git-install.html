@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0">
-  <title>First Step - KSS PC Club</title>
-  <script src="./bundle.js"></script>
-  <link rel="stylesheet" href="./css/main.css">
+  <title>Gitのインストール | First Step - KSS PC Club</title>
+  <script src="../bundle.js"></script>
+  <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
   <div id="scrollbar"><div id="scrollbar_thumb"></div></div>
@@ -22,7 +22,7 @@
   <div class="container" id="start">
     <div class="arrow arrow-bottom"></div>
     <div class="center">
-      <p class="title">KSS PC Club<br>First Step</p>
+      <p class="title">Gitのインストール手順</p>
       <div class="description" id="note900px">
         このページは横幅900px以上の端末での使用を意図して作られています。<br>
         現在お使いの端末では正常に動作しない可能性があります。
@@ -34,17 +34,9 @@
     <div class="arrow arrow-top"></div>
     <div class="arrow arrow-bottom"></div>
     <div class="center">
-      <p class="title">サービス登録</p>
+      <p class="title">インストーラーのダウンロード</p>
       <div class="description">
-        パソコン部で使用するサービスに登録します。<br>
-        以下の順で登録してください。詳しくはリンク先に記してあります。<br>
-        <ol>
-          <li><external-link url="./reg/slack.html">Slack</external-link>（参加必須）</li>
-          <li><external-link url="./reg/github.html">GitHub</external-link>（参加必須）</li>
-          <li><external-link url="./reg/discord.html">Discord</external-link>（参加任意）</li>
-          <li><external-link url="./reg/trello.html">Trello</external-link>（参加任意）</li>
-          <li><external-link url="./reg/hackmd.html">HackMD</external-link>（参加任意）</li>
-        </ol>
+        まずは、<external-link url="https://gitforwindows.org/">「Git for Windows」のサイト</external-link>を開き、「Download」します。
       </div>
     </div>
   </div>
@@ -52,10 +44,16 @@
     <div class="arrow arrow-top"></div>
     <div class="arrow arrow-bottom"></div>
     <div class="center">
-      <p class="title">Gitインストール</p>
+      <p class="title">インストール</p>
       <div class="description">
-        Gitをインストールします。<br>
-        詳しくは<external-link url="./articles/git-install.html">こちら</external-link>に記してあります。
+        インストールします。自分のものにあったように設定してください。<br>
+        よくわからないものは、デフォルトでたいていうまくいきます。<br>
+        ただし、下の画像の1枚目は、「Use Visual Studio Code as ～」、2枚目はそのままで進んでください。<br><br>
+        ※画像はクリックで拡大表示されます。
+      </div>
+      <div class="imgContainer">
+        <img src="../img/git-inst/01.png" alt="">
+        <img src="../img/git-inst/02.png" alt="">
       </div>
     </div>
   </div>
@@ -63,23 +61,21 @@
     <div class="arrow arrow-top"></div>
     <div class="arrow arrow-bottom"></div>
     <div class="center">
-      <p class="title">VS Code Install</p>
+      <p class="title">設定</p>
       <div class="description">
-        <external-link url="https://code.visualstudio.com/download">VS Code</external-link>
+        インストールが終わったら、コマンドプロンプトを開き、設定をします。<br>
+        以下のコマンドを貼り付け、自分のものに編集して、Enterを押します。<br>
+        ユーザー名はGitHubに登録しているもの。<br>
+        メールアドレスは<external-link url="https://github.com/settings/emails#primary_email_select">こちら</external-link>にある、「～@users.noreply.github.com」がベストです。<br><br>
+        <code>git config --global user.name "ユーザー名"</code><br>
+        <code>git config --global user.email "メールアドレス"</code>
       </div>
     </div>
   </div>
   <div class="container">
     <div class="arrow arrow-top"></div>
-    <div class="arrow arrow-bottom"></div>
     <div class="center">
-      <p class="title">GitHub Learning Lab</p>
-    </div>
-  </div>
-  <div class="container">
-    <div class="arrow arrow-top"></div>
-    <div class="center">
-      <p class="title">End</p>
+      <p class="title">終わり！</p>
     </div>
   </div>
 </body>
