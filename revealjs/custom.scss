@@ -1,0 +1,36 @@
+.reveal{
+
+  h1,h2,h3,h4,h5,h6{
+
+    &.no-transform{
+      text-transform: none;
+    }
+  }
+
+  img.no-margin{
+    margin: 0;
+  }
+
+  img.border{
+    border: 5px solid #555;
+  }
+
+  section.scrollable{
+    height: 800px;
+    overflow-y: auto !important;
+  }
+
+  kbd {
+    display: inline-block;
+    padding: 2px 4px;
+    font-size: 0.85em;
+    font-weight: 700;
+    line-height: 1;
+    color: #333;
+    white-space: nowrap;
+    background-color: #eee;
+    border: 1px solid #b4b4b4;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  }
+}

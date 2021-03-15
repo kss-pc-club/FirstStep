@@ -4,86 +4,525 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0">
   <title>First Step - KSS PC Club</title>
-  <script src="./bundle.js"></script>
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="revealjs/reset.css">
+  <link rel="stylesheet" href="revealjs/reveal.css">
+  <link rel="stylesheet" href="revealjs/theme/white.css" id="theme">
+  <link rel="stylesheet" href="revealjs/custom.css">
 </head>
 <body>
-  <div id="scrollbar"><div id="scrollbar_thumb"></div></div>
-  <div class="container showing" id="loader">
-    <div class="center">
-      <p class="title">Loading...</p>
-      <div class="description" id="noteJS">
-        もしかして: JavaScriptを無効化している<br><br>
-        JavaScriptを無効化していると、このページは表示できません。<br>
-        JavaScriptを有効にしてから、再度表示してください。
-      </div>
+  <div class="reveal">
+    <div class="slides">
+      <!-- "data-name" 属性は、エディターでタグを折りたたむ際に便利です。 -->
+      <section data-name="タイトル">
+        <h2 class="r-fit-text">First Step</h2>
+        <p>to Join KSS PC Club</p>
+        <p>(Powered by <a href="https://revealjs.com/" target="_blank">Reveal.js</a>)</p>
+      </section>
+      <section data-name="操作方法">
+        <h2>このチュートリアルの操作方法</h2>
+        <ul class="fragment fade-up">
+          <li>右下の矢印ボタンか、キーボードの矢印キーで操作できます。</li>
+          <li><kbd>O</kbd>キーを押すことで、スライド全体を見渡せます。</li>
+          <li><kbd>F</kbd>キーを押すと、全画面で表示されます。解除するには<kbd>Esc</kbd>キーを押してください。</li>
+          <li><a href="https://firststep.kss-pc.club/">https://firststep.kss-pc.club/</a>にアクセスすれば、いつでも見れます。</li>
+          <li>このページはオープンソースです。<a href="https://github.com/kss-pc-club/FirstStep" target="_blank">GitHub</a>からページを編集できます。</li>
+        </ul>
+      </section>
+      <section data-name="目次">
+        <h2>目次</h2>
+        <ul>
+          <li><a href="#/1">このチュートリアルの操作方法</a></li>
+          <li><a href="#/3">登録するサービスの一覧と説明</a></li>
+          <li><a href="#/4">Slackに登録する</a></li>
+          <li><a href="#/5">GitHubに登録する</a></li>
+          <li><a href="#/6">Discordに登録する</a></li>
+          <li><a href="#/7">Trelloに登録する</a></li>
+          <li><a href="#/8">HackMDに登録する</a></li>
+          <li><a href="#/9">Gitのインストール</a></li>
+          <li><a href="#/10">Visual Studio Codeのインストール</a></li>
+          <li><a href="#/11">GitHub Learning Labで使い方講座を受ける（任意）</a></li>
+        </ul>
+      </section>
+      <section data-name="サービス紹介">
+        <section data-name="サービス一覧">
+          <h2>サービスに登録する</h2>
+          <p class="fragment fade-in" data-fragment-index="1">登録するサービスは以下の通りです。赤色は登録必須で、青色は登録任意です。</p>
+          <ul class="fragment fade-in" data-fragment-index="2">
+            <li class="fragment highlight-red" data-fragment-index="2">Slack</li>
+            <li class="fragment highlight-red" data-fragment-index="2">GitHub</li>
+            <li class="fragment highlight-blue" data-fragment-index="2">Discord</li>
+            <li class="fragment highlight-blue" data-fragment-index="2">Trello</li>
+            <li class="fragment highlight-blue" data-fragment-index="2">HackMD</li>
+          </ul>
+          <p data-fragment-index="2" class="fragment fade-in">下スクロールで各サービスの説明を見れます</p>
+        </section>
+        <section data-name="Slackの紹介">
+          <h2 class="no-transform"><img data-src="img/logo/slack.svg" width="40" height="40" class="no-margin"> Slackとは？</h2>
+          <li class="fragment fade-up">チーム内チャットサービス。いわば生産性に特化したLINEのようなもの。</li>
+          <li class="fragment fade-up">同学年同士はもちろん、上級生・下級生との交流や質疑応答にも利用できる。</li>
+          <li class="fragment fade-up">交流や質疑応答を行い、技術向上を図ることができる。</li>
+          <li class="fragment fade-up">パソコンを触ることが多い分、Slackを憩いの場に使ってほしい。</li>
+        </section>
+        <section data-name="GitHubの紹介">
+          <h2 class="no-transform"><img data-src="img/logo/github.svg" width="40" height="40" class="no-margin"> GitHubとは？</h2>
+          <li class="fragment fade-up">ソースコード共有サービス。</li>
+          <li class="fragment fade-up">無料で個人のページを建てることもできる。</li>
+          <li class="fragment fade-up">学年で何かページを公開したいときに利用することも可能。</li>
+          <li class="fragment fade-up">コードハイライト機能により、可読性を高くしてのプログラミングの質疑応答ができる。</li>
+          <li class="fragment fade-up">いつかGitHubを使用する際に最低限の知識を得てほしい。</li>
+        </section>
+        <section data-name="Discordの紹介">
+          <h2 class="no-transform"><img data-src="img/logo/discord.svg" width="40" height="40" class="no-margin"> Discordとは？</h2>
+          <li class="fragment fade-up">ボイスチャットサービス。</li>
+          <li class="fragment fade-up">某ウイルスにより話題になった、「テレワーク」として使う。</li>
+          <li class="fragment fade-up">画面共有ができるため、リモートワークができる。</li>
+          <li class="fragment fade-up">（家から部活に参加もできるかも...？）</li>
+        </section>
+        <section data-name="Trelloの紹介">
+          <h2 class="no-transform"><img data-src="img/logo/trello.svg" width="40" height="40" class="no-margin"> Trelloとは？</h2>
+          <li class="fragment fade-up">プロジェクト管理サービス。</li>
+          <li class="fragment fade-up">個人または複数人で実行する計画の進捗を可視化する。</li>
+          <li class="fragment fade-up">やることをチェックボックスで書き出す、参加するメンバーを管理する、意見をコメントする、など。</li>
+          <li class="fragment fade-up">Slackとの互換性があり、プロジェクトを実行し始めたらSlackに共有できる。</li>
+        </section>
+        <section data-name="HackMDの紹介">
+          <h2 class="no-transform"><img data-src="img/logo/hackmdっぽい.svg" width="40" height="40" class="no-margin"> HackMDとは？</h2>
+          <li class="fragment fade-up">Markdown形式で記述できる、ノートのようなもの。</li>
+          <li class="fragment fade-up">本部活動では、様々な部員向け資料の共有などに用いる。</li>
+          <li class="fragment fade-up">学校関連のプロジェクトの説明書にも使う。</li>
+        </section>
+      </section>
+      <section data-name="Slackの登録">
+        <section>
+          <h2 class="no-transform">Slackの登録 (1/6)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>メールアドレス登録</h3>
+              <p>
+                <a href="https://s.kss-pc.club/slack" target="_blank">https://s.kss-pc.club/slack</a>にアクセスします。<br>
+                次に出てくる画像で示されているように、自分のメールアドレスを入力します。
+              </p>
+            </div>
+            <img data-src="img/slack/01.png" class="fragment border">
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">Slackの登録 (2/6)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>氏名とパスワードの登録</h3>
+              <p>
+                メールアドレスを確認すると、画像のような画面が表示されるので、氏名とパスワードを登録します。<br>
+                氏名は、漢字でもローマ字でも構いませんが、ニックネームはやめてください。
+              </p>
+            </div>
+            <img data-src="img/slack/02.png" class="fragment border">
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">Slackの登録 (3/6)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>#general チャンネルであいさつ</h3>
+              <p>
+                登録が完了すると、Greetbotからメッセージが届きます。<br>
+                まずは、#general チャンネルを開き、あいさつをしてみましょう！<br><br>
+                コピペ用↓<br><pre><code>〇年の【氏名】です！ゲーム制作に興味があるので自分でゲームを作れるように頑張りたいです！</code></pre>
+              </p>
+            </div>
+            <img data-src="img/slack/03.png" class="fragment border">
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">Slackの登録 (4/6)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>プロフィールの編集</h3>
+              <p>
+                あいさつできたら、自分のプロフィールを編集します。<br>
+                左側にある「○○（自分）」をクリックして、自分のアイコンをクリック。右側にメニューが出るので、「プロフィールを編集」です！<br>
+                以下の画像に沿って、編集していきます。
+              </p>
+            </div>
+            <img data-src="img/slack/04.png" class="fragment border">
+            <img data-src="img/slack/05.png" class="fragment border">
+            <img data-src="img/slack/06.png" class="fragment border">
+            <img data-src="img/slack/07.png" class="fragment border">
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">Slackの登録 (5/6)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>学年チャンネルの作成</h3>
+              <p>
+                学年リーダーは、学年チャンネルを作成します。<br>
+                画面左「+」から、「チャンネルを作成する」<br>
+                画像のように入力し、「プライベートチャンネルにする」をオンにして、「作成」！<br><br>
+                メンバーの追加も忘れずに！！
+              </p>
+            </div>
+            <img data-src="img/slack/08.png" class="fragment border">
+            <img data-src="img/slack/09.png" class="fragment border">
+            <img data-src="img/slack/10.png" class="fragment border">
+            <img data-src="img/slack/11.png" class="fragment border">
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">Slackの登録 (6/6)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>モバイルアプリのインストール</h3>
+              <p>
+                いつでも通知を受け取れるように、忘れずにスマホ版アプリも入れておきましょう。<br>
+                <a href="https://apps.apple.com/jp/app/slack/id618783545?mt=8" target="_blank">AppStore</a>・
+                <a href="https://play.google.com/store/apps/details?id=com.Slack" target="_blank">Google Play</a>
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section data-name="GitHubの登録">
+        <section>
+          <h2 class="no-transform">GitHubの登録 (1/7)</h2>
+          <div class="r-stack">
+            <div>
+              <h3 class="no-transform">GitHubを開く</h3>
+              <p>
+                <a href="https://github.co.jp/" target="_blank">https://github.co.jp/</a> にアクセスし、「登録する」をクリックします。<br><br>
+                もうすでに登録している人は、<a href="#/5/5">Step6</a>に進んでください。<br>
+                複数のアカウントを持つことは、<a href="https://docs.github.com/ja/github/site-policy/github-terms-of-service#b-account-terms" target="_blank">利用規約違反</a>となります。自分が古河中等PC部に所属していることは外部から隠すことができるので、PC部用にアカウントを作成しないでください。
+              </p>
+            </div>
+            <img data-src="img/github/01.png" class="fragment border">
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">GitHubの登録 (2/7)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>アカウント登録</h3>
+              <p>
+                ユーザー名、メールアドレス、パスワードを登録し、ロボットではない確認をします。<br>
+                ユーザー名は自分の覚えやすいものにしておきましょう。
+              </p>
+            </div>
+            <img data-src="img/github/02.png" class="fragment border">
+            <img data-src="img/github/03.png" class="fragment border">
+            <img data-src="img/github/04.png" class="fragment border">
+            <img data-src="img/github/05.png" class="fragment border">
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">GitHubの登録 (3/7)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>プランの選択</h3>
+              <p>
+                プランを選択しましょう。<br>
+                「Individual」の「Free」プランで十分です。<br>
+                もし、「Pro」プランの機能も欲しければ、「<a href="https://docs.github.com/ja/education/explore-the-benefits-of-teaching-and-learning-with-github-education/apply-for-a-student-developer-pack" target="_blank">GitHub Student Developer Pack</a>」で無料で機能が付与されるので、試してみましょう。
+              </p>
+            </div>
+            <img data-src="img/github/06.png" class="fragment border">
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">GitHubの登録 (4/7)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>アンケートに答える</h3>
+              <p>
+                アンケートに回答します。<br>
+                画像の指示に従い、選択します。
+              </p>
+            </div>
+            <img data-src="img/github/07.png" class="fragment border">
+            <img data-src="img/github/08.png" class="fragment border">
+            <img data-src="img/github/09.png" class="fragment border">
+            <img data-src="img/github/10.png" class="fragment border">
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">GitHubの登録 (5/7)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>メールアドレスの確認</h3>
+              <p>
+                アンケートの回答が終わると、確認メールが届きます。<br>
+                メールアドレスを認証しましょう。
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">GitHubの登録 (6/7)</h2>
+          <div class="r-stack">
+            <div>
+              <h3 class="no-transform">GitHub Teams への招待</h3>
+              <p>
+                部長に、自分のGitHubユーザー名を伝えます。<br>
+                しばらくすると、部長から招待された旨のメッセージが来るので、メールを確認します。<br>
+                来たメールの「Join @kss-pc-club」をクリックし、参加します。
+              </p>
+            </div>
+            <img data-src="img/github/11.png" class="fragment border">
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">GitHubの登録 (7/7)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>モバイルアプリのインストール</h3>
+              <p>
+                いつでも通知を受け取れるように、忘れずにスマホ版アプリも入れておきましょう。<br>
+                <a href="https://apps.apple.com/jp/app/github/id1477376905?mt=8" target="_blank">AppStore</a>・
+                <a href="https://play.google.com/store/apps/details?id=com.github.android" target="_blank">Google Play</a>
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section data-name="Discordの登録">
+        <section>
+          <h2 class="no-transform">Discordの登録 (1/6)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>登録リンクを開く</h3>
+              <p>
+                <a href="https://s.kss-pc.club/discord" target="_blank">https://s.kss-pc.club/discord</a> を開きます。
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">Discordの登録 (2/6)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>アカウント登録</h3>
+              <p>
+                ユーザー名、メールアドレス、パスワードを登録します。<br>
+                ユーザー名は知らせなくてかまいませんが、誰かがわかるようにニックネームを変更して下さい。
+              </p>
+            </div>
+            <img data-src="img/discord/01.png" class="fragment border">
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">Discordの登録 (3/6)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>サーバーに参加</h3>
+              <p>
+                チュートリアルが表示されると思いますが、飛ばしてかまいません。<br>
+                画面左上の「+」をクリックして、「サーバーに参加」です。<br>
+                Slackで送られたURLを入力します。
+              </p>
+            </div>
+            <img data-src="img/discord/02.png" class="fragment border">
+            <img data-src="img/discord/03.png" class="fragment border">
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">Discordの登録 (4/6)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>参加完了のサイン</h3>
+              <p>
+                以下の画面が出れば、参加はできています。<br>
+                次のステップに進みましょう。
+              </p>
+            </div>
+            <img data-src="img/discord/04.png" class="fragment border">
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">Discordの登録 (5/6)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>メールアドレスの確認</h3>
+              <p>
+                メールアドレスを認証しましょう。
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">Discordの登録 (6/6)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>モバイルアプリのインストール</h3>
+              <p>
+                いつでも通知を受け取れるように、忘れずにスマホ版アプリも入れておきましょう。<br>
+                <a href="https://apps.apple.com/jp/app/discord/id985746746?mt=8" target="_blank">AppStore</a>・
+                <a href="https://play.google.com/store/apps/details?id=com.discord" target="_blank">Google Play</a>
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section data-name="Trelloの登録">
+        <section>
+          <h2 class="no-transform">Trelloの登録 (1/4)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>登録リンクを開く</h3>
+              <p>
+                <a href="https://s.kss-pc.club/trello" target="_blank">https://s.kss-pc.club/trello</a> を開きます。
+              </p>
+            </div>
+            <img data-src="img/trello/01.png" class="fragment border">
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">Trelloの登録 (2/4)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>アカウント登録</h3>
+              <p>
+                Googleアカウントで続行すると早く終わります。おすすめです。
+              </p>
+            </div>
+            <img data-src="img/trello/02.png" class="fragment border">
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">Trelloの登録 (3/4)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>メールアドレスの確認は不要</h3>
+              <p>
+                Googleアカウントで登録すると、メールアドレスの確認は不要となります。
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">Trelloの登録 (4/4)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>モバイルアプリのインストール</h3>
+              <p>
+                いつでも通知を受け取れるように、忘れずにスマホ版アプリも入れておきましょう。<br>
+                <a href="https://apps.apple.com/jp/app/trello/id461504587?mt=8" target="_blank">AppStore</a>・
+                <a href="https://play.google.com/store/apps/details?id=com.trello" target="_blank">Google Play</a>
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section data-name="HackMDの登録">
+        <section>
+          <h2 class="no-transform">HackMDの登録 (1/3)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>アカウント登録</h3>
+              <p>
+                <a href="https://hackmd.io/join" target="_blank">https://hackmd.io/join</a> を開きます。<br>
+                GitHubで登録すると早いでしょう。
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">HackMDの登録 (2/3)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>メールアドレスの確認は不要</h3>
+              <p>
+                GitHubアカウントなどで登録すると、メールアドレスの確認は不要となります。
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">HackMDの登録 (3/3)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>KSS PC Clubに参加</h3>
+              <p>
+                設定が終わったら、部長に自分のユーザー名を伝え、参加します。<br>
+                ユーザー名は<a href="https://hackmd.io/settings#general" target="_blank">こちら</a>から確認できます。<br>
+                招待メールが届きますので、開いてください。
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section data-name="Gitのインストール">
+        <section>
+          <h2 class="no-transform">Gitのインストール (1/3)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>インストーラーのダウンロード</h3>
+              <p>
+                <a href="https://git-scm.com/" target="_blank">https://git-scm.com/</a> を開きます。<br>
+                画面右側にある「Download x.x.x for Windows」をクリックし、ダウンロード。
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">Gitのインストール (2/3)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>インストール</h3>
+              <p>
+                インストールします。自分のものにあったように設定してください。<br>
+                よくわからないものは、デフォルトで良いです。<br>
+                ただし、画像の1枚目は、「Use Visual Studio Code as ～」、2枚目はそのままで進んでください。
+              </p>
+            </div>
+            <img data-src="img/git-inst/01.png" class="fragment border">
+            <img data-src="img/git-inst/02.png" class="fragment border">
+          </div>
+        </section>
+        <section>
+          <h2 class="no-transform">Gitのインストール (3/3)</h2>
+          <div class="r-stack">
+            <div>
+              <h3>設定</h3>
+              <p>
+                インストールが終わったら、コマンドプロンプトを開き、設定をします。<br>
+                以下のコマンドを貼り付け、自分のものに編集して、Enterを押します。<br>
+                ユーザー名はGitHubに登録しているもの。<br>
+                メールアドレスは<a href="https://github.com/settings/emails#primary_email_select" target="_blank">こちら</a>にある、「～@users.noreply.github.com」がベストです。<br><br>
+                <pre><code>git config --global user.name "ユーザー名"</code></pre><pre><code>git config --global user.email "メールアドレス"</code></pre>
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section data-name="VSCodeのインストール">
+        <h2 class="no-transform">Visual Studio Codeのインストール</h2>
+        <p>
+          <a href="https://code.visualstudio.com/download" target="_blank">こちら</a>からダウンロードし、インストール。
+        </p>
+      </section>
+      <section data-name="GitHub Learning Lab">
+        <h2 class="no-transfrom">GitHub Learning Labで使い方講座を受ける（任意）</h2>
+        <div class="r-stack">
+          <p>
+            GitHubの公式サービスです。<a href="https://lab.github.com/" target="_blank">https://lab.github.com/</a>
+            登録すると、使い方やプログラミング言語についてなど、体験型講座が受けられます。<br><br>
+            まずは、「<a href="https://lab.github.com/githubtraining/first-day-on-github" target="_blank">First Day on GitHub</a>」を受けることをお勧めします。
+          </p>
+          <img data-src="img/gh-ll/01.png" class="fragment border">
+        </div>
+      </section>
+      <section data-name="おわり">
+        <h2>終わり</h2>
+        <p>
+          お疲れ様でした。<br>
+          これからパソコン部としての活動を頑張っていきましょう！
+        </p>
+      </section>
     </div>
   </div>
-  <div class="container" id="start">
-    <div class="arrow arrow-bottom"></div>
-    <div class="center">
-      <p class="title">KSS PC Club<br>First Step</p>
-      <div class="description" id="note900px">
-        このページは横幅900px以上の端末での使用を意図して作られています。<br>
-        現在お使いの端末では正常に動作しない可能性があります。
-      </div>
-    </div>
-    <button id="viewFull">View in Fullscreen mode</button>
-  </div>
-  <div class="container">
-    <div class="arrow arrow-top"></div>
-    <div class="arrow arrow-bottom"></div>
-    <div class="center">
-      <p class="title">サービス登録</p>
-      <div class="description">
-        パソコン部で使用するサービスに登録します。<br>
-        以下の順で登録してください。詳しくはリンク先に記してあります。<br>
-        <ol>
-          <li><external-link url="./reg/slack.html">Slack</external-link>（参加必須）</li>
-          <li><external-link url="./reg/github.html">GitHub</external-link>（参加必須）</li>
-          <li><external-link url="./reg/discord.html">Discord</external-link>（参加任意）</li>
-          <li><external-link url="./reg/trello.html">Trello</external-link>（参加任意）</li>
-          <li><external-link url="./reg/hackmd.html">HackMD</external-link>（参加任意）</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="arrow arrow-top"></div>
-    <div class="arrow arrow-bottom"></div>
-    <div class="center">
-      <p class="title">Gitインストール</p>
-      <div class="description">
-        Gitをインストールします。<br>
-        詳しくは<external-link url="./articles/git-install.html">こちら</external-link>に記してあります。
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="arrow arrow-top"></div>
-    <div class="arrow arrow-bottom"></div>
-    <div class="center">
-      <p class="title">Visual Studio Codeのインストール</p>
-      <div class="description">
-        <external-link url="https://code.visualstudio.com/download">こちら</external-link>からダウンロードし、インストール。
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="arrow arrow-top"></div>
-    <div class="arrow arrow-bottom"></div>
-    <div class="center">
-      <p class="title">GitHub Learning Labでの使い方講座</p>
-      <div class="description">
-        詳しくは<external-link url="./articles/gh-lab.html">こちら</external-link>から（現在作成中）
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="arrow arrow-top"></div>
-    <div class="center">
-      <p class="title">終わり！</p>
-    </div>
-  </div>
+  <script src="revealjs/reveal.js"></script>
+  <script>
+    Reveal.initialize({});
+    Reveal.configure({ pdfSeparateFragments: false });
+  </script>
 </body>
 </html>
